@@ -1,0 +1,1349 @@
+/* body {
+    overflow-y: auto;
+} */
+
+.hero {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.story-section {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* ========================================
+   GENERAL PAGE
+   ======================================== */
+ 
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #3a1d35 0%,
+            #1d101c 35%,
+            #0d080d 75%
+        );
+
+    background-attachment: fixed;
+
+    color: #f8f1f5;
+
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Times New Roman", serif;
+    font-weight: normal;
+}
+
+/* ========================================
+   SCREEN 1 — WELCOME
+   ======================================== */
+
+#welcomeScreen {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transition: opacity 1s ease;
+}
+
+
+/* ========================================
+   SCREEN 2 — PASSWORD
+   ======================================== */
+
+#nextScreen {
+    min-height: 100vh;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 1s ease;
+}
+
+
+/* ========================================
+   SCREEN 3 — MAIN EXPERIENCE
+   ======================================== */
+
+#mainExperience {
+    min-height: 100vh;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   FADE ANIMATIONS
+   ======================================== */
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+#nextScreen.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   HEADINGS
+   ======================================== */
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   PARAGRAPHS
+   ======================================== */
+
+/* p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+} */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(248, 241, 245, 0.72);
+}
+
+/* ========================================
+   GENERAL BUTTON
+   ======================================== */
+
+button {
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: white;
+    color: #120b12;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   PASSWORD INPUT
+   ======================================== */
+
+#passwordInput {
+    margin-top: 25px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 25px;
+
+    font-size: 1rem;
+
+    text-align: center;
+
+    outline: none;
+}
+
+
+/* ========================================
+   UNLOCK BUTTON
+   ======================================== */
+
+#unlockButton {
+    display: block;
+
+    margin: 15px auto 0;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: white;
+    color: #120b12;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   MESSAGE ANIMATION
+   ======================================== */
+
+#message {
+    transition: opacity 0.3s ease;
+}
+
+/* ========================================
+   CINEMATIC HERO
+   ======================================== */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    padding: 40px 25px;
+
+    position: relative;
+}
+
+
+/* SMALL DECORATION */
+
+.hero-decoration {
+    color: #c99aa8;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+
+    opacity: 0.8;
+}
+
+
+/* EYEBROW */
+
+.hero-eyebrow {
+    font-size: 0.75rem;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: rgba(248, 241, 245, 0.55);
+
+    margin: 0 0 20px 0;
+}
+
+
+/* MAIN TITLE */
+
+.hero h1 {
+    font-size: clamp(3.5rem, 10vw, 7rem);
+
+    font-weight: normal;
+
+    letter-spacing: -2px;
+
+    margin: 0;
+}
+
+
+/* DATE */
+
+.hero-date {
+    font-size: 0.85rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #c99aa8;
+
+    margin: 25px 0 0 0;
+}
+
+
+/* LINE */
+
+.hero-line {
+    width: 50px;
+    height: 1px;
+
+    background: rgba(201, 154, 168, 0.6);
+
+    margin: 30px 0;
+}
+
+
+/* DESCRIPTION */
+
+.hero-text {
+    max-width: 420px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+    color: rgba(248, 241, 245, 0.65);
+
+    margin: 0;
+}
+
+
+/* SCROLL */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(248, 241, 245, 0.45);
+}
+
+
+.scroll-indicator span {
+    font-size: 0.65rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.scroll-indicator {
+    font-size: 1rem;
+}
+
+/* 
+/* ========================================
+   SCROLL REVEAL
+   ======================================== */
+
+.story-section {
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.story-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   CINEMATIC MEMORY
+   ======================================== */
+
+.memory-section {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+
+.memory-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* TITLE */
+
+.memory-section h2 {
+    max-width: 650px;
+
+    font-size: clamp(2.3rem, 6vw, 4rem);
+
+    font-weight: normal;
+
+    margin: 0 0 45px 0;
+}
+
+
+/* PHOTO FRAME */
+
+.memory-frame {
+    width: min(82%, 650px);
+
+    position: relative;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+
+    border-radius: 4px;
+}
+
+
+/* PHOTO */
+
+.memory-image {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 2px;
+}
+
+
+/* DATE */
+
+.memory-date {
+    margin: 30px 0 0 0;
+
+    color: #c99aa8;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* CAPTION */
+
+.memory-caption {
+    max-width: 500px;
+
+    margin-top: 15px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: rgba(248, 241, 245, 0.6);
+}
+/* ========================================
+   GALLERY
+======================================== */
+
+.gallery-section {
+
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 140px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.gallery-section h2 {
+
+    max-width: 700px;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    font-weight: normal;
+
+    margin: 0 0 100px 0;
+}
+
+
+/* ========================================
+   EDITORIAL GALLERY
+======================================== */
+
+.editorial-gallery {
+
+    width: min(90%, 1000px);
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    grid-template-rows: auto auto auto;
+
+    column-gap: 30px;
+
+    row-gap: 100px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   GALLERY ITEMS
+======================================== */
+
+.gallery-item {
+
+    text-align: left;
+
+    position: relative;
+}
+
+
+/* Large image */
+
+.gallery-item-large {
+
+    grid-column: 2 / 9;
+
+    grid-row: 1;
+}
+
+
+/* Small image */
+
+.gallery-item-small {
+
+    grid-column: 9 / 13;
+
+    grid-row: 1;
+
+    margin-top: 120px;
+}
+
+
+/* Medium image */
+
+.gallery-item-medium {
+
+    grid-column: 4 / 10;
+
+    grid-row: 2;
+
+    margin-top: 30px;
+}
+
+
+/* Another small image */
+
+.gallery-item.second-small {
+
+    grid-column: 1 / 5;
+
+    grid-row: 3;
+
+    margin-top: -30px;
+}
+
+
+/* ========================================
+   IMAGE FRAME
+======================================== */
+
+.gallery-image-wrap {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45);
+
+    overflow: hidden;
+
+    border-radius: 3px;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.gallery-image-wrap img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.gallery-image-wrap:hover img {
+
+    transform: scale(1.035);
+
+    filter: brightness(1.05);
+}
+
+
+/* ========================================
+   CAPTION
+======================================== */
+
+.gallery-caption {
+
+    margin: 18px 0 0 0;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 1.5px;
+
+    color: rgba(248, 241, 245, 0.5);
+
+    line-height: 1.6;
+}
+
+/* ========================================
+   MOBILE GALLERY
+======================================== */
+
+.editorial-gallery {
+
+    width: 90%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 70px;
+}
+
+
+.gallery-item-large,
+.gallery-item-small,
+.gallery-item-medium,
+.gallery-item.second-small {
+
+    width: 100%;
+
+    margin: 0;
+}
+
+
+.gallery-item-small {
+
+    width: 78%;
+
+    align-self: flex-end;
+}
+
+
+.gallery-item-medium {
+
+    width: 92%;
+
+    align-self: center;
+}
+
+
+.gallery-item.second-small {
+
+    width: 75%;
+
+    align-self: flex-start;
+}
+
+
+.gallery-caption {
+
+    font-size: 0.75rem;
+
+    margin-top: 14px;
+}
+
+/* ========================================
+   GALLERY HOVER
+   ======================================== */
+
+.gallery-card {
+    overflow: hidden;
+}
+
+.gallery-card img {
+    transition: transform 0.5s ease;
+}
+
+
+.gallery-card:hover img {
+    transform: scale(1.03);
+}
+
+.gallery-card p {
+    font-size: 1rem;
+
+    letter-spacing: 0.5px;
+
+    margin-top: 18px;
+
+    opacity: 0.65;
+}
+/* ========================================
+   VIDEO SECTION
+======================================== */
+
+.video-section {
+
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 160px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.video-section h2 {
+
+    max-width: 700px;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    font-weight: normal;
+
+    margin: 0 0 35px 0;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.video-intro {
+
+    max-width: 500px;
+
+    margin-bottom: 70px;
+}
+
+.video-intro p {
+
+    margin: 0;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    color: rgba(248, 241, 245, 0.55);
+}
+
+
+/* ========================================
+   VIDEO
+======================================== */
+
+.cinematic-video {
+
+    width: min(88%, 950px);
+
+    position: relative;
+}
+
+
+/* ========================================
+   VIDEO FRAME
+======================================== */
+
+.video-frame {
+
+    width: 100%;
+
+    padding: 9px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.55);
+
+    border-radius: 3px;
+}
+
+
+/* ========================================
+   VIDEO
+======================================== */
+
+.video-frame video {
+
+    width: 100%;
+
+    display: block;
+
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    background: #050305;
+}
+
+
+/* ========================================
+   VIDEO DETAILS
+======================================== */
+
+.video-details {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+    color: rgba(248, 241, 245, 0.45);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.video-divider {
+
+    width: 25px;
+
+    height: 1px;
+
+    background: rgba(201, 154, 168, 0.6);
+}
+
+@media (max-width:600px) {
+    .video-section {
+
+        padding: 120px 20px;
+    }
+
+
+    .video-section h2 {
+
+        margin-bottom: 25px;
+    }
+
+
+    .video-intro {
+
+        width: 85%;
+
+        margin-bottom: 55px;
+    }
+
+
+    .video-intro p {
+
+        font-size: 0.95rem;
+    }
+
+
+    .cinematic-video {
+
+        width: 82%;
+    }
+
+
+    .video-frame {
+
+        padding: 6px;
+    }
+
+
+    .video-frame video {
+
+        max-height: 60vh;
+    }
+
+
+    .video-details {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 20px;
+
+        font-size: 0.6rem;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .video-divider {
+
+        width: 20px;
+    }
+}
+
+/* ========================================
+   LETTER SECTION
+======================================== */
+
+.letter-section {
+
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 160px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.letter-section h2 {
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    font-weight: normal;
+
+    margin: 0 0 75px 0;
+}
+
+
+/* ========================================
+   LETTER
+======================================== */
+
+.letter {
+
+    width: min(85%, 650px);
+
+    text-align: left;
+
+    padding: 55px 50px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.35);
+
+    border-radius: 3px;
+}
+
+
+/* ========================================
+   LETTER TEXT
+======================================== */
+
+.letter p {
+
+    margin: 0 0 30px 0;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 2;
+
+    color: rgba(248, 241, 245, 0.78);
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.letter-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: rgba(201, 154, 168, 0.7);
+
+    margin: 45px 0;
+}
+
+
+/* ========================================
+   ENDING
+======================================== */
+
+.letter .letter-ending {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    color: rgba(201, 154, 168, 0.75);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .letter-section {
+
+        padding: 120px 20px;
+    }
+
+    .letter-section h2 {
+
+        margin-bottom: 55px;
+    }
+
+    .letter {
+
+        width: 90%;
+
+        padding: 40px 30px;
+    }
+
+    .letter p {
+
+        font-size: 1.1rem;
+
+        line-height: 1.9;
+    }
+
+}
+
+/* ========================================
+   FINAL SECTION
+======================================== */
+
+.final-section {
+
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 140px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* ========================================
+   SECTION NUMBER
+======================================== */
+
+.final-section .section-label {
+
+    margin-bottom: 55px;
+}
+
+
+/* ========================================
+   HEART
+======================================== */
+
+.final-heart {
+
+    font-size: 2rem;
+
+    color: #c99aa8;
+
+    margin-bottom: 35px;
+
+    opacity: 0.85;
+
+    animation: gentlePulse 4s ease-in-out infinite;
+}
+
+
+@keyframes gentlePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.final-section h2 {
+
+    font-family: "Times New Roman", serif;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    font-weight: normal;
+
+    margin: 0 0 65px 0;
+}
+
+
+/* ========================================
+   LETTER
+======================================== */
+
+.final-letter {
+
+    width: min(90%, 650px);
+
+    text-align: left;
+}
+
+
+/* ========================================
+   WORDS
+======================================== */
+
+.final-letter p {
+
+    margin: 0 0 35px 0;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 1.2rem;
+
+    line-height: 2;
+
+    color: rgba(248, 241, 245, 0.72);
+}
+
+
+/* ========================================
+   SIGNATURE
+======================================== */
+
+.final-letter .final-signature {
+
+    margin-top: 60px;
+
+    font-size: 1.3rem;
+
+    font-style: italic;
+
+    color: rgba(201, 154, 168, 0.8);
+
+    text-align: right;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .final-section {
+
+        padding: 110px 25px;
+    }
+
+    .final-section h2 {
+
+        margin-bottom: 50px;
+    }
+
+    .final-letter {
+
+        width: 90%;
+    }
+
+    .final-letter p {
+
+        font-size: 1.05rem;
+
+        line-height: 1.9;
+    }
+
+    .final-letter .final-signature {
+
+        margin-top: 45px;
+    }
+
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    top: -200px;
+    left: 50%;
+
+    width: 500px;
+    height: 500px;
+
+    transform: translateX(-50%);
+
+    background: #6b345f;
+
+    opacity: 0.12;
+
+    filter: blur(120px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
